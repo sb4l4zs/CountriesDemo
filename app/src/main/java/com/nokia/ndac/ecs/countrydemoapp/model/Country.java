@@ -14,6 +14,15 @@ public class Country {
     @Expose
     private String alpha3_code;
 
+    public Country() {
+    }
+
+    public Country(String name, String alpha2_code, String alpha3_code) {
+        this.name = name;
+        this.alpha2_code = alpha2_code;
+        this.alpha3_code = alpha3_code;
+    }
+
     public String getName() {
         return name;
     }
