@@ -27,6 +27,13 @@ public class MemoryRepository implements Repository {
 
     @Override
     public List<Country> getCountries(String query) {
-        return null;
+        List<Country> result = new ArrayList<>();
+        for (Country country :
+                DataManager.INSTANCE.getCountries()) {
+            if (country.getName().contains(query)) {
+                result.add(country);
+            }
+        }
+        return result;
     }
 }

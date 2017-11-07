@@ -4,7 +4,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-public abstract class InteractorSelector {
+public abstract class BaseInteractor {
     Context context;
 
     public Context getContext() {

@@ -14,6 +14,14 @@ public class RestResponse {
     @Expose
     private List<Country> countries = new ArrayList<>();
 
+    public RestResponse() {
+    }
+
+    public RestResponse(List<String> messages, List<Country> countries) {
+        this.messages = messages;
+        this.countries = countries;
+    }
+
     public List<String> getMessages() {
         return messages;
     }
