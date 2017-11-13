@@ -2,6 +2,7 @@ package com.nokia.ndac.ecs.countrydemoapp;
 
 import com.nokia.ndac.ecs.countrydemoapp.interactor.InteractorModule;
 import com.nokia.ndac.ecs.countrydemoapp.interactor.country.CountryInteractor;
+import com.nokia.ndac.ecs.countrydemoapp.network.NetworkInterceptor;
 import com.nokia.ndac.ecs.countrydemoapp.network.NetworkModule;
 import com.nokia.ndac.ecs.countrydemoapp.repository.RepositoryModule;
 import com.nokia.ndac.ecs.countrydemoapp.ui.UIModule;
@@ -20,6 +21,8 @@ public interface CountryDemoApplicationComponent {
     void inject(MainPresenter mainPresenter);
 
     void inject(CountryInteractor countryInteractor);
+
+    void inject(NetworkInterceptor networkInterceptor);
 
     void inject(CountryDemoApplication countryDemoApplication);
 }

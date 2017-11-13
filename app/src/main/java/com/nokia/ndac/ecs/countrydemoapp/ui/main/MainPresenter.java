@@ -54,9 +54,6 @@ public class MainPresenter extends Presenter<MainScreen> {
     public void onEventMainThread(final CountriesEvent event) {
         if (event.getThrowable() != null) {
             event.getThrowable().printStackTrace();
-            if (screen != null) {
-//                screen.showNetworkError(event.getThrowable().getMessage());
-            }
         } else {
             if (screen != null) {
                 screen.showResponse(event.getCountries());
